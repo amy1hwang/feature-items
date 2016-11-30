@@ -4,8 +4,8 @@
 
 .header, nav, .container, .galleryItem, .featureText {
   border:1px dashed #000;
-  margin: 10px;
-  padding: 10px;
+  margin: 10px auto;
+  /*padding: 10px;*/
 }
 
 nav li {
@@ -23,14 +23,64 @@ ul {
   text-align: center;
 }
 
-.galleryItem, .imgContainer {
+.galleryItem{
+  width: 100%;
+}
+
+.imgContainer {
   width: 100%;
 }
 
 img {
-  width: 80vw;
-  height: 80vw;
+  width: 95vw;
+  height: 95vw;
 }
+
+@media screen and (min-width: 600px) {
+
+  img {
+    margin: auto 2%;
+    width: 45vw;
+    height: 45vw;
+  }
+
+  .galleryItem {
+    float: left;
+    width: 48%;
+  }
+
+  .galleryItem:nth-of-type(odd) {
+    margin: 2% 2% 30px 0%;
+  }
+
+  .galleryItem:nth-of-type(even) {
+    margin: 2% 0% 30px 2%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  img {
+    margin: auto 2%;
+    width: 19vw;
+    height: 19vw;
+  }
+
+  .galleryItem {
+    float: left;
+    width: 20%;
+    margin: 2% 2.5% 30px 2.5%;
+  }
+
+  .galleryItem:nth-of-type(odd) {
+    margin: 2% 2.5% 30px 2.5%;
+  }
+
+  .galleryItem:nth-of-type(even) {
+    margin: 2% 2.5% 30px 2.5%;
+  }
+
+}
+
 
 .clearfix:before,
 .clearfix:after {
